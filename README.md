@@ -10,15 +10,15 @@ The repair manuals on these old turntables are quite good and give full schemati
 
 I managed to track the issue to a specific custom Technics IC on one of the boards.  Unfortunately it's hard to find and expensive nowadays.
 
-![](IMG_20211224_012908.jpg)
-![](IMG_20211224_012917.jpg)
-![](IMG_20211224_014929.jpg)
+Instead I decided to just completely (non-destructively) bypass the control board) with an Arduino spitting out RC-filtered PWM at one of three duty cycles for 33/45/78 rpm records.  I wired the buttons directly to digital IO on the Arduino and inject the PWM into the control board (which has a convenient connector).  There is also a potentiometer for manually trimming rpm.
 
 
-Instead I decided to just completely (non-destructively) bypass the control board) with an Arduino spitting out RC-filtered PWM at one of three duty cycles for 33/45/78 rpm records.  I wired the buttons directly to digital IO on the Arduino and inject the PWM into the control board (which has a convenient connector).  There is also a potentiometer for manually retuning rpm.
+<img src="IMG_20211224_012908.jpg" height="300px"/>
+<img src="IMG_20211224_012917.jpg" height="300px"/>
+<img src="IMG_20211224_014929.jpg" height="300px"/>
 
-I don't have a Tachometer for tuning the speed of the table, so I taped a metal screwdriver to the platter so that it would bump against an oscilloscope probe where I can measure the exact frequency.
+I don't have a Tachometer for tuning the speed of the table, so I taped a metal screwdriver to the platter so that it would bump against an oscilloscope probe where I can measure the exact frequency and adjust trim.
 
 ![](out2.gif)
 
-With the way I've repaired it the table is no longer with closed-loop speed control, but at least it spins.
+With the way I've repaired it the table no longer has closed-loop speed control, but so far my family hasn't noticed.  At least it spins!
